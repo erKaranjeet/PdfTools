@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "865574453925",
+    "project_id": "pdf-tools-54ad4",
+    "storage_bucket": "pdf-tools-54ad4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865574453925:android:de7f3e6a8610e7be9f434c",
+        "android_client_info": {
+          "package_name": "kjsdev.pdftools"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "865574453925-k8sgllp1dtpp8v0bo2ce1vu952b7lbhn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kjsdev.pdftools",
+            "certificate_hash": "fcd92bcaf5538b6c4b19cdf50a184929e37f74ea"
+          }
+        },
+        {
+          "client_id": "865574453925-uid1i0crm0lblvn1s026s3n3dmc2qhac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzFbw-PSx8QGq8_JhlrsEqy0Df5y5pkTQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "865574453925-uid1i0crm0lblvn1s026s3n3dmc2qhac.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

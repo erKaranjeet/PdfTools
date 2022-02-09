@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MergePdfActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".fragment.MergeFilesFragment">
+
+        <com.dd.morphingbutton.MorphingButton
+            android:id="@+id/selectFiles"
+            style="@style/MorphingButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/sarabunregular"
+            android:padding="10dp"
+            android:text="Select Files" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/selected_files"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorGreyLight"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlueLight"
+        android:textStyle="bold"
+        android:layout_marginLeft="16dp"
+        android:text="Save Location"
+        android:layout_above="@+id/ll_merge_location"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="1"
+        android:layout_above="@+id/ll_merge_bottom"
+        android:id="@+id/ll_merge_location">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp"
+            android:id="@+id/tv_merge_folder"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight=".4"
+            android:background="@drawable/btn_back_rounded"
+            android:textColor="@color/colorWhite"
+            android:textSize="17sp"
+            android:text="Choose"
+            android:gravity="center"
+            android:layout_gravity="center_vertical|right"
+            android:layout_margin="16dp"
+            android:id="@+id/btn_merge_choose"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:id="@+id/ll_merge_bottom">
+
+        <com.dd.morphingbutton.MorphingButton
+            android:id="@+id/mergebtn"
+            style="@style/MorphingButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/sarabunregular"
+            android:padding="10dp"
+            android:text="MERGE FILES" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:padding="10dp"
+            android:text="Cancel"
+            android:textColor="@color/colorBlack" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.PdfToJpegActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_back_rounded"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:text="Select PDF File"
+        android:gravity="center"
+        android:id="@+id/btn_pdf_to_jpg_select"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/tv_pdf_to_jpg_path"/>
+
+    <TextView
+        android:id="@+id/pdfToImagesText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/sarabunregular"
+        android:text="@string/extract_images_success"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorGreyLight"
+        app:reverseLayout="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        android:id="@+id/rv_pdf_to_jpg_data"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlueLight"
+        android:textStyle="bold"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Save Location" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center"
+       android:weightSum="1">
+
+       <TextView
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight=".6"
+           android:layout_gravity="center_vertical"
+           android:layout_marginLeft="16dp"
+           android:textColor="@color/colorBlack"
+           android:textSize="14sp"
+           android:id="@+id/tv_pdf_to_jpg_folder"/>
+
+       <androidx.appcompat.widget.AppCompatButton
+           android:layout_width="0dp"
+           android:layout_height="40dp"
+           android:layout_weight=".4"
+           android:background="@drawable/btn_back_rounded"
+           android:textColor="@color/colorWhite"
+           android:textSize="17sp"
+           android:text="Choose"
+           android:gravity="center"
+           android:layout_gravity="center_vertical|right"
+           android:layout_margin="16dp"
+           android:id="@+id/btn_pdf_to_jpg_choose"/>
+
+   </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/btn_back_rounded_grey"
+        android:enabled="false"
+        android:clickable="false"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:text="Convert PDF To Jpeg"
+        android:gravity="center"
+        android:id="@+id/btn_pdf_to_jpg_convert"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Cancel"
+        android:textColor="@color/colorBlueLight"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_pdf_to_jpg_cancel"/>
+
+</LinearLayout>

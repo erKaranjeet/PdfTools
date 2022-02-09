@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SplitPdfActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/split_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="24dp"
+                android:gravity="center"
+                android:fontFamily="@font/sarabunregular"
+                android:text="@string/split_info"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <com.dd.morphingbutton.MorphingButton
+                android:id="@+id/selectFile"
+                style="@style/MorphingButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="24dp"
+                android:maxWidth="30dp"
+                android:fontFamily="@font/sarabunregular"
+                android:text="@string/merge_file_select"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/split_config"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="24dp"
+                android:ems="10"
+                android:padding="10dp"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/et_split_back"
+                android:labelFor="@id/split_info"
+                android:inputType="number"
+                android:digits="0123456789-,"
+                android:visibility="gone" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/splitfiles_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="24dp"
+                android:fontFamily="@font/sarabunregular"
+                android:text="@string/split_success"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/splitted_files"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorGreyLight"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlueLight"
+            android:textStyle="bold"
+            android:layout_marginLeft="16dp"
+            android:text="Save Location"
+            android:layout_above="@+id/ll_split_location"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="1"
+            android:layout_above="@+id/ll_split_bottom"
+            android:id="@+id/ll_split_location">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".6"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:id="@+id/tv_split_folder"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight=".4"
+                android:background="@drawable/btn_back_rounded"
+                android:textColor="@color/colorWhite"
+                android:textSize="17sp"
+                android:text="Choose"
+                android:gravity="center"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="16dp"
+                android:id="@+id/btn_split_choose"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/ll_split_bottom">
+
+            <com.dd.morphingbutton.MorphingButton
+                android:id="@+id/splitFiles"
+                style="@style/MorphingButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="24dp"
+                android:fontFamily="@font/sarabunregular"
+                android:text="Split PDF" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

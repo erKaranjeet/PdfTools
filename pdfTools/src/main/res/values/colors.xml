@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlueLight">#18d1d7</color>
+    <color name="colorGrey">#CFCFCF</color>
+    <color name="colorGreyLight">#E6E6E6</color>
+
+    <array name="paranoid_theme">
+        <!-- Overview -->
+        <item>#151515</item> <!--  Top Header bg -->
+        <item>#2c9633</item> <!-- header text   -->
+        <item>#FFFFFF</item> <!-- list bg  -->
+        <item>@android:color/white</item> <!--  storage list name text  -->
+        <item>#e1e1e1</item> <!-- free space text  -->
+        <item>#2c9633</item> <!-- memory bar -->
+
+        <!-- secondary dialog colors -->
+        <item>@color/colorBlueLight</item> <!-- folder tint -->
+        <item>@color/colorWhite</item> <!-- list bg -->
+        <item>@android:color/black</item> <!-- list text -->
+        <item>#151515</item> <!-- address bar tint -->
+        <item>@color/chevronBgColor</item> <!-- new folder hint tint -->
+        <item>@color/colorBlueLight</item> <!-- select button color -->
+        <item>#da6c6c</item> <!-- new folder layour bg -->
+        <item>#2c9633</item> <!-- fab multi color -->
+        <item>#18d1d7</item> <!-- address bar bg -->
+    </array>
+
+</resources>

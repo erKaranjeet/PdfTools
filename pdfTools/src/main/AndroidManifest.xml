@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pdftools">
+
+    <application>
+        <activity android:name=".activities.CompressPdfActivity" />
+        <activity android:name=".activities.SplitPdfActivity" />
+        <activity android:name=".activities.InvertPdfActivity" />
+        <activity android:name=".activities.MergePdfActivity" />
+        <activity android:name=".activities.ExcelToPdfActivity" />
+        <activity
+            android:name=".activities.PdfToJpegActivity"
+            android:configChanges="orientation|screenSize" />
+    </application>
+
+</manifest>
